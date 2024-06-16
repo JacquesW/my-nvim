@@ -5,8 +5,11 @@ local opts = {
 }
 local map = vim.api.nvim_set_keymap
 
--- vim.g.mapleader = "\\"
+vim.g.mapleader = "\\"
 -- vim.g.maplocalleader = "\\"
+
+vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true, silent = true })
+
 
 map('n', '<leader>t', ':NvimTreeToggle', opts)
 map('n', '<leader>tf', '<Esc>:NvimTreeFindFile<CR>', opts)

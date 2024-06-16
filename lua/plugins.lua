@@ -65,8 +65,13 @@ return require('packer').startup(function(use)
         -- })
         use 'fatih/vim-go'
         use 'mhinz/vim-startify'
-        use 'github/copilot.vim'
+        -- use 'github/copilot.vim'
         use 'lukas-reineke/indent-blankline.nvim'
+        use 'ggandor/leap.nvim'
+        use "nvim-lua/plenary.nvim"
+        use 'neovim/nvim-lspconfig'
+        use 'scalameta/nvim-metals'
+
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins

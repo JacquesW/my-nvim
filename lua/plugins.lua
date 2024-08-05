@@ -71,6 +71,23 @@ return require('packer').startup(function(use)
         use "nvim-lua/plenary.nvim"
         use 'neovim/nvim-lspconfig'
         use 'scalameta/nvim-metals'
+        
+        use 'nvim-tree/nvim-web-devicons'
+        use({'glepnir/nerdicons.nvim', cmd = 'NerdIcons', config = function() require('nerdicons').setup({}) end})
+        use {
+           'phaazon/hop.nvim',
+            branch = 'v2', -- optional but strongly recommended
+            config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+            end
+        }
+
+        use {
+            'nvim-telescope/telescope.nvim', tag = '0.1.8',
+            -- or                            , branch = '0.1.x',
+            requires = { {'nvim-lua/plenary.nvim'} }
+        }
 
 
         -- Automatically set up your configuration after cloning packer.nvim

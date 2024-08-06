@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
             end,
-       }
+        }
         use {'neoclide/coc.nvim', branch = 'release'}
         use 'voldikss/vim-floaterm'
         use 'jiangmiao/auto-pairs'
@@ -68,21 +68,28 @@ return require('packer').startup(function(use)
         -- use 'github/copilot.vim'
         use 'lukas-reineke/indent-blankline.nvim'
         use 'ggandor/leap.nvim'
-        use "nvim-lua/plenary.nvim"
+        use 'nvim-lua/plenary.nvim'
         use 'neovim/nvim-lspconfig'
         use 'scalameta/nvim-metals'
         
         use 'nvim-tree/nvim-web-devicons'
         use({'glepnir/nerdicons.nvim', cmd = 'NerdIcons', config = function() require('nerdicons').setup({}) end})
+--        use {
+--            'phaazon/hop.nvim',
+--            branch = 'v2', -- optional but strongly recommended
+--            config = function()
+--                -- you can configure Hop the way you like here; see :h hop-config
+--                require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+--            end
+--        }
         use {
-           'phaazon/hop.nvim',
-            branch = 'v2', -- optional but strongly recommended
+            'smoka7/hop.nvim',
+            tag = '*', -- optional but strongly recommended
             config = function()
-            -- you can configure Hop the way you like here; see :h hop-config
-            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+                -- you can configure Hop the way you like here; see :h hop-config
+                require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
             end
         }
-
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.8',
             -- or                            , branch = '0.1.x',
